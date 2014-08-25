@@ -2,30 +2,29 @@
 <meta charset="utf-8"> 
 <html>
 <head>
-	
-
 	<title>일하세요</title>
 
-	<link rel="stylesheet" type="text/css" href="./style.css">
+	<link rel="stylesheet" href="./style.css">
+	
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script>
+	$(function() {
+		if(location.hash !== "") {
+		    showImage(location.hash.substr(1));
+		}
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		function showImage(idx) {
+		    $(".bigimages img").attr("src", "images/image" + idx + ".gif");
+		    $(".active").removeClass("active");
+		    $(".links a:nth-child(" + idx + ")").addClass("active");
+		}
 
-	<script type="text/javascript">
-	if(location.hash !== "") {
-	    showImage(location.hash.substr(1));
-	}
-
-	function showImage(idx) {
-	    $(".bigimages img").attr("src", "images/image" + idx + ".gif");
-	    $(".active").removeClass("active");
-	    $(".links a:nth-child(" + idx + ")").addClass("active");
-	}
-
-	$(window).on("hashchange", function() {
-	    var idx = location.hash.substr(1);
-	    if(idx === "") return;
-	    
-	    showImage(idx);
+		$(window).on("hashchange", function() {
+		    var idx = location.hash.substr(1);
+		    if(idx === "") return;
+		    
+		    showImage(idx);
+		});
 	});
 	</script>
 	
