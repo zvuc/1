@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<meta charset="utf-8"> 
+<html>
+<head>
+	
+
+	<title>일하세요</title>
+
+	<link rel="stylesheet" type="text/css" href="./style.css">
+	
+	<script type="text/javascript">
+	function changeImage(current) {
+		var imagesNumber = 11;
+
+		for (i=1; i<=imagesNumber; i++) {
+			if (i == current) {
+				document.getElementById("normal" + current).style.display = "block";
+			} else {
+				document.getElementById("normal" + i).style.display = "none";
+			}
+		}
+	}
+	</script>
+	
+</head>
+<body>
+
+	<h1>일하세요.</h1>
+	<div id="gallery">
+		<div id="links">
+			<a href="javascript: changeImage(1);">일이 너무 많다</a>
+			<a href="javascript: changeImage(2);">일이 많이 남았다</a>
+			<a href="javascript: changeImage(3);">일이 점점 늘어난다<span class="new">UPDATE</span></a>
+			<a href="javascript: changeImage(4);">일이 줄어들지 않는다</a>
+			<a href="javascript: changeImage(5);">일이 터졌다</a>
+			<a href="javascript: changeImage(6);">아무 일도 일어나지 않는다<span class="new">UPDATE</span></a>
+			<a href="javascript: changeImage(7);">일을 벌려보자</a>
+			<a href="javascript: changeImage(8);">일베</a>
+			<a href="javascript: changeImage(9);">일이 끝나지 않는다<span class="new">NEW!</span></a>
+			<a href="javascript: changeImage(10);">일이 커진다<span class="new">NEW!</span></a>
+			<a href="javascript: changeImage(11);">일하자<span class="new">NEW!</span></a>
+		</div>
+
+		<div id="bigimages">
+			<div id="normal1">
+				<img src="images/image1.gif" alt=""/>
+			</div>
+
+			<div id="normal2">
+				<img src="images/image2.gif" alt=""/>
+			</div>
+
+			<div id="normal3">
+				<img src="images/image3.gif" alt=""/>
+			</div>
+
+			<div id="normal4">
+				<img src="images/image4.gif" alt=""/>
+			</div>
+
+			<div id="normal5">
+				<img src="images/image5.gif" alt=""/>
+			</div>
+
+			<div id="normal6">
+				<img src="images/image6.gif" alt=""/>
+			</div>
+
+			<div id="normal7">
+				<img src="images/image7.gif" alt=""/>
+			</div>
+
+			<div id="normal8">
+				<img src="images/image8.gif" alt=""/>
+			</div>
+
+			<div id="normal9">
+				<img src="images/image9.gif" alt=""/>
+			</div>
+
+			<div id="normal10">
+				<img src="images/image10.gif" alt=""/>
+			</div>
+
+			<div id="normal11">
+				<img src="images/image11.gif" alt=""/>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+<footer>
+<p>last updated 2014-08-25</a></p>
+<p>created by <a href="http://twitter.com/zvuuc">zvuc</a></p>
+</footer>
+
+</body>
+</html>
