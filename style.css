@@ -20,23 +20,21 @@ img {
 h1 {
 	margin: 10px 0;
 }
-#normal2, #normal3, #normal4, #normal5, #normal6, #normal7, #normal8, #normal9, #normal10, #normal11 {
-	display: none;
-}
-#gallery {
+
+.gallery {
 	margin: 0 auto;
 	padding: 20px;
 	width: 600px;
 	background: #333;
 }
-#links {
+.links {
 	margin: 10px auto 10px auto;
 	text-align: left;
 	width: 190px;
 	margin: 4px auto;
 	float: left;
 }
-#links a {
+.links a {
 	width: 180px;
 	height: 15px;
 	padding: 2px 0;
@@ -46,10 +44,13 @@ h1 {
 	text-decoration: none;
 	display: block;
 }
-#links a:hover {
+.links a:hover {
 	border-bottom: 1px solid #888;
 }
-#links a { 
+.links a.active {
+	border-bottom: 1px solid orange;
+}
+.links a { 
 	position: relative;
 }
 .new { 
@@ -61,11 +62,11 @@ h1 {
 	background: #333;
 }
 
-#bigimages {
+.bigimages {
 	width: 400px;
 	margin: 0 0 0 190px;
 }
-#bigimages img {
+.bigimages img {
 	border: 2px solid #555;
 	margin-top: 5px;
 	width: 400px;
