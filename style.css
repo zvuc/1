@@ -37,6 +37,13 @@ h1 {
 .mobile-title {
 	display: none;
 }
+.mobile-title .arrow {
+	color: #666;
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+}
 .links a, .mobile-title a {
 	width: 180px;
 	height: 15px;
@@ -62,7 +69,6 @@ h1 {
 	padding: 2px;  
 	position: absolute; 
 	top: 0; right: 0;
-	background: #333;
 }
 
 .bigimages {
@@ -92,8 +98,10 @@ footer p {
 
 @media (max-device-width: 800px) {
 	.gallery {
-		width: 80%;
-		padding: 35px 5% 5% 5%;
+		width: 100%;
+		padding: 10px;
+		box-sizing: border-box;
+		position: relative;
 	}
 	.bigimages {
 		margin: 0;
@@ -102,22 +110,41 @@ footer p {
 	.bigimages img {
 		width: 100%;
 	}
-	.links, .mobile-title {
+	.links {
 		position: absolute;
 		display: block;
 		background: #333;
-		width: 180px;
-		top: 62px;
-		left: 11%;
+		width: 200px;
+		top: 41px;
+		left: 0;
+		margin: 0 10px;
+		border: 1px solid #666;
 	}
 	.mobile-title {
-		top: 45px;
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+	.mobile-title a, .mobile-title a.active {
+		display: block;
+		width: 200px;
+		height: 20px;
+		padding: 5px 10px;
+		border: 1px solid #666;
+		background-color: #444;
+		font-weight: bold;
+	}
+	.mobile-title a:hover {
+		background-color: #555;
 	}
 	.links {
-		left: 9%;
+		left: 0;
 		padding: 10px;
 	}
 	.links.hide {
 		display: none;
+	}
+	.links a {
+		width: 100%;
 	}
 }
