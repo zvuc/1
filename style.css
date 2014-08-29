@@ -27,14 +27,17 @@ h1 {
 	width: 600px;
 	background: #333;
 }
-.links {
+.links, .mobile-title {
 	margin: 10px auto 10px auto;
 	text-align: left;
 	width: 190px;
 	margin: 4px auto;
 	float: left;
 }
-.links a {
+.mobile-title {
+	display: none;
+}
+.links a, .mobile-title a {
 	width: 180px;
 	height: 15px;
 	padding: 2px 0;
@@ -44,13 +47,13 @@ h1 {
 	text-decoration: none;
 	display: block;
 }
-.links a:hover {
+.links a:hover, .mobile-title a:hover {
 	border-bottom: 1px solid #888;
 }
-.links a.active {
+.links a.active, .mobile-title a.active {
 	border-bottom: 1px solid orange;
 }
-.links a { 
+.links a, .mobile-title a { 
 	position: relative;
 }
 .new { 
@@ -85,4 +88,36 @@ footer {
 footer p { 
 	margin: 0;
 	padding: 0;
+}
+
+@media (max-device-width: 800px) {
+	.gallery {
+		width: 80%;
+		padding: 35px 5% 5% 5%;
+	}
+	.bigimages {
+		margin: 0;
+		width: 100%;
+	}
+	.bigimages img {
+		width: 100%;
+	}
+	.links, .mobile-title {
+		position: absolute;
+		display: block;
+		background: #333;
+		width: 180px;
+		top: 62px;
+		left: 11%;
+	}
+	.mobile-title {
+		top: 45px;
+	}
+	.links {
+		left: 9%;
+		padding: 10px;
+	}
+	.links.hide {
+		display: none;
+	}
 }

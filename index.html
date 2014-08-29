@@ -5,6 +5,7 @@
 	<title>일하세요</title>
 
 	<link rel="stylesheet" href="./style.css">
+	<meta name="viewport" content="width=device-width">
 	
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script>
@@ -15,8 +16,12 @@
 
 		function showImage(idx) {
 		    $(".bigimages img").attr("src", "images/image" + idx + ".gif");
-		    $(".active").removeClass("active");
-		    $(".links a:nth-child(" + idx + ")").addClass("active");
+		    $(".links .active").removeClass("active");
+		    var link = $(".links a:nth-child(" + idx + ")");
+		    link.addClass("active");
+		    $('.links').addClass("hide")
+		    var title = link.html();
+		    $('.mobile-title a').html(title);
 		}
 
 		$(window).on("hashchange", function() {
@@ -24,6 +29,11 @@
 		    if(idx === "") return;
 		    
 		    showImage(idx);
+		});
+		
+		$('.mobile-title a').click(function(e) {
+			e.preventDefault();
+			$('.links').toggleClass("hide");
 		});
 	});
 	</script>
@@ -34,8 +44,10 @@
 	<h1>일하세요.</h1>
 
 	<div class="gallery">
-
-	<div class="links">
+	<div class="mobile-title">
+		<a href="#" class="active">일이 너무 많다</a>
+	</div>
+	<div class="links hide">
 		<a href="#1" class="active">일이 너무 많다</a>
 		<a href="#2">일이 많이 남았다</a>
 		<a href="#3">일이 점점 늘어난다<span class="new">UPDATE</span></a>
